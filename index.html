@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        body {
+            font-family: "Tahoma";
+        }
+
+        section {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: lightgray;
+            font-size: 14px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        hr {
+            margin: 30px auto;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+            padding: 5px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="checkbox"]:checked+label {
+            color: lightgray;
+        }
+
+        li {
+            display: flex;
+            min-width: 90%;
+            margin-bottom: 5px;
+
+        }
+
+        li:hover {
+            background-color: #f3f3f3;
+        }
+
+        li span {
+            cursor: pointer;
+            color: crimson;
+            margin-left: auto;
+        }
+
+        .searchInfo {
+            display: block;
+            font-size: 11px;
+            margin-bottom: 30px;
+            color: crimson;
+        }
+
+        .is--hide {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <form action="">
+            <input type="text" data-addInput>
+            <button data-addBtn>Dodaj zadanie</button>
+        </form>
+        <hr>
+        <h1>Liczba zadań: <span data-listCount>0</span></h1>
+        <h2>Zadania zrobione: <span data-listDone>0</span>, zadania do zrobienia: <span data-listLeft>0</span></h2>
+        <input data-searchInput class="searchInput" type="text" placeholder="wpisz wyszukiwaną frazę">
+        <button data-filterList>Show todo</button>
+        <ul data-list></ul>
+        <span data-searchInfo class="searchInfo"></span>
+        <button data-deleteBtn class="deleteBtn">Usuń wszystko</button>
+        <script src="./js/ToDoList.js" type="module"></script>
+        <!-- <script src="js.js"></script> -->
+    </section>
+</body>
+
+</html>
